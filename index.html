@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" type="image/jpg" href="/icons/list-outline.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Day Planner</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputs">
+
+            <div class="progress">
+                <div class="progress__done">
+                    <span class="progress__done--label">COMPLETED :</span>
+                    <span class="progress__done--value">0</span>
+                </div>
+                <div class="progress__remain">
+                    <span class="progress__remain--label">REMAINING :</span>
+                    <span class="progress__remain--value">0</span>
+                </div>
+            </div>
+            
+            <div class="input__task">
+                <div class="input__task--icon">
+                    <img src="icons/working.svg"/>
+                    <label for="task">TASK</label>
+                </div>
+                <input type="text" placeholder="Enter the task" id="task">
+            </div>
+            
+            <div class="input__priority">
+                <img src="icons/numbered.svg"/>
+                <label for="priority">PRIORITY: </label>
+                <select id="priority" >
+                    <option value="low" selected>LOW</option>
+                    <option value="med">MEDIUM</option>
+                    <option value="high">HIGH</option>
+                </select>
+            </div>
+            
+            <div class="input__btn">
+                <button class="add__bttn">
+                    <div class="input__btn--icon">
+                        <img src="/icons/plus.svg"/>
+                        <span>ADD</span>
+                    </div>
+                </button>
+            </div>
+            
+            
+        </div>
+        
+        <div class="vertical-line"></div>
+        
+        <div class="list">
+            <div class="list-icon">
+                <img src="/icons/to-do-list2.svg"/>
+                <h2 class="list__heading">TO-DO  LIST</h2>
+            </div>
+
+            <div class="high__priority-items">
+            <!--<div class="list__high-item list-item">
+                    <input class="item__checkbox item__checkbox--high" type="checkbox"/>
+                    <span class="item__desc--high">Laundary</span>
+                    <button class="item__bttn item__bttn--high">
+                        x
+                    </button>
+                </div>
+                <div class="list__high-item list-item">
+                    <input class="item__checkbox item__checkbox--high" type="checkbox"/>
+                    <span class="item__desc--high">Laundary 2</span>
+                    <button class="item__bttn item__bttn--high">
+                        x
+                    </button>
+                </div>--> 
+            </div>
+
+            <div class="med__priority-items">
+            <!--<div class="list__med-item list-item">
+                    <input class="item__checkbox item__checkbox--med" type="checkbox"/>
+                    <span class="item__desc--med">medw</span>
+                    <button class="item__bttn item__bttn--med">
+                        x
+                    </button>
+                </div>-->
+            </div>
+
+            <div class="low__priority-items">
+            <!--<div class="list__low-item list-item ">
+                    <input class="item__checkbox item__checkbox--low" type="checkbox"/>
+                    <span class="item__desc--low">Water plants</span>
+                    <button class="item__bttn item__bttn--low">
+                        x
+                    </button>
+                </div>
+            </div>-->
+            
+        </div>
+    
+    </div>
+    <script type="module" src="js/Controller.js"></script>
+</body>
+</html>

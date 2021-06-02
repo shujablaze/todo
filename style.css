@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow:hidden;
+}
+
+body{
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.596),rgba(0, 0, 0, 0.607)), url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height:100vh;
+}
+
+h2{
+    color:rgb(57, 123, 197);
+    font-size: 1.7rem;
+    border-bottom:2px solid rgb(204, 108, 129) ;
+}
+
+.container{
+    max-width:120rem;
+    box-shadow: 0 3rem 8rem #000;
+    border-radius: 1rem;
+    height:70vh;
+    margin: 8rem auto;
+    background-color: #eeeeeede;
+
+    display:flex;
+}
+.vertical-line{
+    background-color:rgba(44, 36, 36, 0.548);
+    width:2px;
+    margin:3rem 0;
+}
+
+/*INPUT MENU*/
+.inputs{
+    width:60%;
+    padding:5rem;
+    letter-spacing: 1px;
+    
+    display: grid;
+    grid-template-rows: max-content repeat(3,1fr);
+    row-gap: 2.5rem;
+}
+
+.progress{
+    display:flex;
+    align-items: top;
+    justify-content: space-around;
+}
+
+.progress__done{
+    font-size: 1.6rem;
+    color:rgb(75, 122, 69);
+}
+
+.progress__remain{
+    font-size: 1.6rem;
+    color:rgb(196, 71, 109);
+}
+
+.input__task--icon{
+    display: flex;
+    align-items:center;
+}
+
+.input__task img{
+    height:3rem;
+    margin-right: 2rem;
+}
+
+.input__task label{
+    font-size: 2rem;
+    color:rgb(46, 84, 139)
+}
+
+.input__task input{
+    margin-top: .5rem;
+    min-width: 95%;
+    padding:1rem;
+    font-size: 2rem;
+    outline: none;
+    border:none;
+}
+
+.input__task input:focus{
+    border-bottom: 2px solid rgb(122, 201, 201);
+}
+
+.input__priority{
+    display: flex;
+    align-items: center;
+}
+
+.input__priority img{
+    height:3rem;
+    margin-right: 2rem;
+}
+
+.input__priority label{
+    margin-right: 2rem;
+    font-size: 2rem;
+    color:rgb(196, 71, 109);
+}
+
+.input__priority select{
+    width:8rem;
+    height:3rem;
+    outline:none;
+    border:none;
+}
+
+.input__priority select:focus{
+    border-top:2px solid rgb(196, 71, 109)
+}
+
+.input__btn{
+    align-self: center;
+}
+
+.input__btn button{
+    min-width:30%;
+    padding:0.7rem;
+    border: none;
+    outline: none;
+    cursor:pointer;
+    background-color:rgb(57, 123, 197);
+    backface-visibility: hidden;
+    transition: all 100ms ease-in-out;
+}
+
+.input__btn img{
+    height:2.5rem;
+    margin:0 2rem;
+}
+
+.input__btn--icon{
+    display: flex;
+    align-items: center;
+    color:#fff;
+    font-size: 1.5rem;
+}
+
+.input__btn button:hover{
+    background-color:rgb(196, 71, 109) ;
+    transform: translateY(-4px);
+}
+
+.input__btn button:active{
+    transform: translateY(-2px);
+}
+
+/*DISPLAY OF TASKS*/
+.list{
+    width:40%;
+    padding:5rem;
+    padding-top: 2rem;
+    word-spacing: 3px;
+    overflow-y: scroll;
+}
+
+.list::-webkit-scrollbar{
+    width:6px;
+    overflow: hidden;
+}
+
+.list::-webkit-scrollbar-thumb{
+    border-radius: 15px;
+    background:rgba(36, 83, 136);
+    transition: all 500ms ease-in-out;
+}
+
+.list::-webkit-scrollbar-thumb:hover{
+    border-radius: 15px;
+    background:rgb(156, 58, 112);
+}
+
+.list-icon{
+    display: flex;
+    align-items: center;
+}
+
+.list-icon img{
+    height:4rem;
+    transform: rotateZ(-10deg);
+    margin-right: 2rem;
+}
+
+.list-item{
+    display:grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    text-transform: uppercase;
+    column-gap: 5rem;
+
+    font-size: 1.5rem;
+    margin-top: 0.7rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.list-item button{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.list__high-item{
+    color:rgb(196, 71, 109) ;    
+}
+
+.item__bttn--high{
+    color:rgb(196, 71, 109) ;
+}
+
+.list__med-item{
+    color:rgb(194, 140, 25)   
+}
+
+.item__bttn--med{
+    color:rgb(194, 141, 28)
+}
+
+.list__low-item{
+    color:rgb(57, 158, 43);
+}
+
+.item__bttn--low{
+    color:rgb(57, 158, 43);
+}
+
+/*For completed tasks*/
+.checked__item{
+    text-decoration: line-through;
+    opacity:0.6;
+}
+
+.checked__item button{
+    display: none;
+}
+
+.checked__item input[type=checkbox]{
+    opacity:0.5;
+}
